@@ -10,6 +10,7 @@ any tool; how to apply them in a specific one is in `tools.md`. The skill's own 
 - [Cleaning the dialogue](#cleaning-the-dialogue)
 - [Room tone](#room-tone)
 - [Music under the voice](#music-under-the-voice)
+- [Auditioning music for a how-to](#auditioning-music-for-a-how-to)
 - [Computing a gain from measured levels](#computing-a-gain-from-measured-levels)
 - [Sound effects: when to use them and when not to](#sound-effects-when-to-use-them-and-when-not-to)
 - [Mastering for YouTube](#mastering-for-youtube)
@@ -54,6 +55,8 @@ each location **[StudioBinder, creator]**, with the same mic and settings.
   dropout).
 - Use it to cover a removed cough or noise, and as the bed of a J or L cut.
 - No room tone? Copy the cleanest quiet stretch from the recording itself.
+- A sped how-to stretch whose room tone is distorted, and cannot be split from the tool, is muted. See
+  [Auditioning music for a how-to](#auditioning-music-for-a-how-to).
 
 ## Music under the voice
 
@@ -67,6 +70,36 @@ each location **[StudioBinder, creator]**, with the same mic and settings.
 - **Edit music on its phrases**: cut or loop on a bar line, and end on a real ending or a fade, not
   mid-note. Hit the downbeat on a key cut when the music is foregrounded.
 - **License it** (`licenses.md`).
+- **A how-to or a garage job** auditions the bed before it is mixed, and picks a pocket. That is the next
+  section.
+
+## Auditioning music for a how-to
+
+Learned on a hands-on car job **[house]**. Search the CC0 library first (`licenses.md`). If a new bed is
+still needed, hear it on its own before it goes under the picture.
+
+- **Two or three beds, isolated.** Each bed is its own WAV master (48 kHz) and its own MP4: a still card,
+  AAC, no footage. A person can drop one track onto the Final Cut timeline without another render. Do not
+  bake a candidate into the picture in order to hear it.
+- **A car or garage how-to defaults to a melodic, bass-forward pocket.** Warmer, the bass carrying the
+  line. Not a trailer whoosh, and not a holy choir pad, which fights the garage. Offer a harder bounce
+  (syncopated knock, heavier sub) as the alternate. On the audition that set this default, the
+  choir-and-bells bed was the weaker of the three; the melodic pocket was the match; the bounce stayed the
+  alternate.
+- **A style reference is a pocket and a bass feel.** It is never a sample, a download, or a remix of a
+  named artist's record.
+- **Duck under speech**, 6–12 dB, on top of the 18–25 dB offset above. On sped wrenching, if the room tone
+  is distorted and the edit cannot split it from the tool, mute that stretch. Scratchy sped audio does not
+  stay under a beat.
+- **YouTube is commercial.** MusicGen medium weights (`facebook/musicgen-medium`) are CC BY-NC 4.0.
+  Generations from those weights are audition-only until a commercial-use bed replaces them. They are not
+  uploaded and they do not enter `library/` (`licenses.md`).
+- **The editable master is the timeline** (the FCPXML or the NLE project). A flattened music mix is a
+  preview.
+- **A reviewer's clock is program time on the review movie.** "4:55 should be gone" is not a source
+  timecode. Walk the edit list: an item's duration is `(out - in) / speed`, and
+  `source = in + (program - item start) × speed`. Map the note back to source in and out. Do not treat the
+  review-movie clock as source time.
 
 ## Computing a gain from measured levels
 
@@ -148,4 +181,7 @@ ffmpeg -i render.mp4 -c:v copy -af "loudnorm=I=-14:TP=-1:LRA=11:measured_I=<inpu
 - **[StudioBinder]**: "What is room tone". https://www.studiobinder.com/blog/what-is-room-tone/
 - **[YT-encoding]**: YouTube Help, "Recommended upload encoding settings". https://support.google.com/youtube/answer/1722171
 - **[Mayer]**: https://doi.org/10.1037/0003-066X.63.8.760
+- **[house]**, auditioning music for a how-to: a three-bed audition on a garage job (melodic bass-forward
+  kept, harder bounce as the alternate, choir pad weaker), with MusicGen medium kept off the upload because
+  the weights are CC BY-NC 4.0.
 - **ffmpeg loudnorm**: https://ffmpeg.org/ffmpeg-filters.html#loudnorm; two passes: https://dev.to/masonwritescode/two-pass-loudness-normalization-with-ffmpeg-loudnorm-the-right-way-1nm3

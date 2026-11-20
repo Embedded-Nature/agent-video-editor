@@ -9,6 +9,7 @@ library ([`../library/`](../library/)) is 100 % CC0 and its evidence is in
 - [Audio: summary by source](#audio-summary-by-source)
 - [Stock footage and images](#stock-footage-and-images)
 - [Other people's clips and fair use](#other-peoples-clips-and-fair-use)
+- [Generated music](#generated-music)
 - [Rules](#rules)
 - [Sources](#sources)
 
@@ -75,6 +76,13 @@ license. The license covers the file, not everything in it.
   top does not.
 - Fair use is a US doctrine; other countries have narrower exceptions. When in doubt, do not use it.
 
+## Generated music
+
+YouTube is commercial use. Meta's MusicGen medium weights (`facebook/musicgen-medium`) are CC BY-NC 4.0
+**[MusicGen-medium]**. A clip from those weights can be auditioned on its own files. It does not go on the
+channel, and it does not enter `library/`, until a bed with a commercial-use license replaces it. Naming a
+pocket or a bass feel is a style note. It is not permission to sample or download that artist's record.
+
 ## Rules
 
 1. **On a monetized channel, only CC0, the YouTube Audio Library, or a license that explicitly says
@@ -108,3 +116,5 @@ license. The license covers the file, not everything in it.
 - **[Pexels]**: https://www.pexels.com/license/
 - **[YT-fair-use]**: YouTube Help, "Fair use on YouTube". https://support.google.com/youtube/answer/9783148
 - **CC0**: https://creativecommons.org/publicdomain/zero/1.0/
+- **[MusicGen-medium]**: Hugging Face model card, license CC-BY-NC-4.0.
+  https://huggingface.co/facebook/musicgen-medium
