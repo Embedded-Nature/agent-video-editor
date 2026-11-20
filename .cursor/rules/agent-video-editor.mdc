@@ -1,0 +1,18 @@
+---
+description: Before editing, cutting, grading, or finishing any video (including automotive and how-to), read skills/editing-videos/SKILL.md and follow that pipeline. Do not improvise a different edit.
+alwaysApply: true
+---
+
+# Editing videos
+
+This repository is only the `editing-videos` skill. There is no other Cursor rule and no `AGENTS.md`.
+
+For any request to plan, edit, cut, grade, caption, or finish a video — including automotive and how-to footage — read `skills/editing-videos/SKILL.md` first and follow it. Do not improvise a different pipeline. On tool mechanics, the tool's own docs win; on editorial decisions, this skill does.
+
+After the entry file, load only the recipe and references it names for that video. Paths below are relative to `skills/editing-videos/`.
+
+- Core: `references/` (pacing, hook, graphics and text, audio, color, publishing, licenses, tools) and `review-checklist.md`.
+- One recipe: `recipes/talking-head.md`, `recipes/vlog.md`, `recipes/podcast-to-youtube.md`, `recipes/shorts-from-long-form.md`, or `recipes/narrated-screen-tutorial.md`.
+- Assets, searched then copied into the video project: `library/`, `graphics/`, and `memes/README.md` before `memes/catalog.json`.
+
+Do not rewrite this skill's editing rules while using it to cut a video.
