@@ -3,7 +3,7 @@
   "name": "agent-video-editor",
   "description": "Video editing skill for AI agents: an editor's judgment for any video, with CC0 sounds and graphics.",
   "owner": {
-    "name": "kmilo93sd"
+    "name": "Embedded-Nature"
   },
   "plugins": [
     {

@@ -3,11 +3,11 @@
   "version": "2.0.0",
   "description": "An editor's judgment for any video, for AI agents: pacing and cuts, hooks, captions, graphics, audio levels, color, thumbnails and licensing, with recipes for talking heads, vlogs, podcasts, Shorts and screen tutorials, a CC0 sound library, a CC0 graphics kit for HyperFrames and a meme reference.",
   "author": {
-    "name": "kmilo93sd",
-    "url": "https://github.com/kmilo93sd"
+    "name": "Embedded-Nature",
+    "url": "https://github.com/Embedded-Nature"
   },
-  "homepage": "https://github.com/kmilo93sd/agent-video-editor",
-  "repository": "https://github.com/kmilo93sd/agent-video-editor",
+  "homepage": "https://github.com/Embedded-Nature/agent-video-editor",
+  "repository": "https://github.com/Embedded-Nature/agent-video-editor",
   "license": "MIT",
   "keywords": [
     "video",
