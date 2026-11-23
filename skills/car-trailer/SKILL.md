@@ -6,14 +6,14 @@ description: >-
   the host's own lines play at 1x with word-by-word captions, and every cut lands on a beat of a licensed
   music bed. Use when asked for a trailer, teaser, promo, Short, Reel or TikTok of a car DIY / how-to
   video, or to make one "fun" or "viral".
-license: MIT (code and text); SIL OFL 1.1 (assets/fonts/Anton-Regular.ttf, see assets/fonts/OFL.txt)
+license: MIT (code and text); SIL OFL 1.1 (assets/fonts/Anton-Regular.ttf, see assets/fonts/OFL.txt; assets/fonts/Michroma-Regular.ttf, see assets/fonts/OFL-Michroma.txt)
 compatibility: >
   Python 3 and ffmpeg on the PATH (an ffmpeg with drawtext helps for labelled contact sheets). uv runs the
   helpers that need numpy/scipy/soundfile (make_beat.py), librosa (beats.py) or mlx-whisper (words.py, Apple
-  silicon). The type layer and render need HyperFrames and its skills.
+  silicon), and numpy/scipy/pillow (grade.py, cover.py). The type layer and render need HyperFrames and its skills.
 metadata:
   author: Embedded-Nature
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Car trailer and Short
@@ -24,6 +24,8 @@ One engine makes both formats from a spec file:
 - `scripts/type_layer.py <cues.json> <hf dir>`: writes the HyperFrames type layer (labels, captions, progress bar, punch-ins, flashes, end card).
 - `scripts/lint.py <spec.json>`: coverage, order, labels and pace (`cut.py` runs it after every cut and fails on any problem).
 - `scripts/make_beat.py`: an original drift-phonk bed with an exact beat grid. `scripts/beats.py`: the beat map of any other track. `scripts/words.py`: word timings for the host's lines.
+- `scripts/grade.py`: the look (black and white with one colour kept, crushed blacks, vignette, grain) on the bare picture, before the type. `scripts/cover.py`: the Short's cover in the same look, with the brand's logo and the car as the headline.
+- `references/posting.md`: the title, description, tags and upload settings for a Short, with a template.
 - Spec fields and framing modes: `references/spec.md`. Worked example (one trailer and one Short of the same job, a Porsche Panamera air-filter swap): `references/examples/trailer.json` and `references/examples/short.json`. Read them for the shape of a spec; don't copy their shots or labels.
 
 Load the `hyperframes` skill before touching the type layer (its contract, check and render) and run its CLI the way that skill says (`npx hyperframes <command>`, or its plugin launcher), from inside the HyperFrames project.
@@ -62,6 +64,18 @@ A later cut made with this skill was "close but not as clean cut" and "the detai
 6. **Type:** first time, `hyperframes init hf --skip-skills`; then `python3 -I scripts/type_layer.py cues.json hf`. In `hf/`: `check --json` (add `--safe-zone shorts` for a Short); fix every error, every `line_unread` and every `outside_safe_zone`. `snapshot --at 0,<one time per shot>` and read the contact sheets.
 7. **Render** in `hf/`: `render -o ../<name>.mp4 --fps 30000/1001 -q delivery`. Verify: ffprobe (size, fps, duration), loudness about −14 LUFS (`ffmpeg -af ebur128`), and a frame sheet of the final file.
 8. **Deliver:** show the file and give its path; say which music was used and its license, what came from the 1080p export vs camera originals, and anything not verified (nobody has listened to it).
+
+## Look and cover (after the cut is approved)
+
+The cover sells the tap; the video must look like the cover, or people who tapped swipe away. Both come from one function in `grade.py`.
+
+1. **Study what trends first.** Search YouTube for the car and the job as Shorts and look at the covers with the most views. For car Shorts in 2026: dark, moody car shots with little or no text, and tight shots of gloved hands on the part. Big outlined meme type only shows up on toy and kid content; a cover built that way was called "terrible".
+2. **Lead with the car and the upgrade.** The keyword is the car (`PANAMERA TURBO`) and what was done to it (`AIR FILTER UPGRADE`); the brand appears as its official logo. How the job is done (the bumper comes off) is an aside in the description, not the hook. A title and cover built on "the air filter is behind the bumper" were rejected: "who cares".
+3. **Use the brand's official logo, never its name typed in red.** If it has black ink, make a dark-ground version: `cover.py --reverse-logo <logo.png> <out.png>` (the kept colour stays, black turns white, white goes clear). Ask for the logo file; don't invent one.
+4. **Lettering:** Michroma (`assets/fonts`, OFL), the wide flat caps of a car badge. A maker's own typeface (Porsche Next and the like) is not licensed for public use: say so and don't use it.
+5. **Cover:** `cover.py --frame "<export>@<sec>" --cx <0-1> --logo ... --kicker PORSCHE --title "PANAMERA TURBO" --tag "971 · AIR FILTER UPGRADE" --accent 971 --top <y>`. Pick a frame with the part and the car in one shot (a 9:16 slice of 16:9 is narrow: try several `--cx`). The type goes below the subject: if the logo covers the part, raise `--top`. Show the person 3-4 options side by side before settling.
+6. **Grade the Short to match:** `grade.py hf/assets/picture.mp4 hf-graded/assets/picture.mp4 --keep red --strength 0.6 --open-end <first cut>`: the full look on the first shot (where the cover's promise is checked), 60% after it. Check a still sheet first (`--test t1,t2,t3`): calipers in shadow must stay red. Copy `hf/` to `hf-graded/` (not `node_modules`) and grade there, so the original stays; change the opening label to the cover's wording in `hf-graded/compositions/labels.html`; run `check --safe-zone shorts`; render beside the original and make a side-by-side (`hstack`) so the person can choose.
+7. **Copy:** `references/posting.md`.
 
 ## Framing a Short (16:9 source → 9:16)
 

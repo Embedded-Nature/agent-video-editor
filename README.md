@@ -117,6 +117,7 @@ order and it never said what the viewer was looking at", and every rule in it st
 | **Every cut on the beat** | Beat maps for any track, or an original drift-phonk bed synthesised from scratch (`make_beat.py`) with an exact grid, so the music is the channel's own. |
 | **9:16 recomposed, not squeezed** | Crop aimed at the hands for close work, full frame over a blurred fill for wide shots, all type inside the Shorts safe zone. |
 | **A lint that fails a bad cut** | `cut.py` ends with `lint.py`: a step with no shot, shots out of order, a label missing or a `STEP` number skipped, a voice shot over 4 s, a picture shot over 2.7 s, or the host's lines filling more than half the running time fails the cut. |
+| **A cover and a look that match** | `cover.py` builds the Short's cover from one frame (black and white with one colour kept, the brand's official logo, the car as the headline in Michroma); `grade.py` gives the video the same look, full on the opening shot and 60% after, before the type goes on. `references/posting.md` has the title, description and upload settings. |
 
 It renders the type layer with [HyperFrames](https://github.com/heygen-com/hyperframes). Its music guidance is
 for a promo, where the bed is louder than under a full how-to (the voice still sits at least 10 dB over it).
@@ -231,10 +232,11 @@ skills/editing-videos/
 └── evals/                      cases with what the agent should answer
 
 skills/car-trailer/
-├── SKILL.md                    entry point: non-negotiables, workflow, framing a Short
-├── references/                 spec.md (every spec field) and examples/ (a trailer and a Short of one job)
-├── scripts/                    cut.py, lint.py, type_layer.py, make_beat.py, beats.py, words.py
-├── assets/fonts/               Anton (SIL OFL 1.1)
+├── SKILL.md                    entry point: non-negotiables, workflow, look and cover, framing a Short
+├── references/                 spec.md (every spec field), posting.md (title, description, upload settings),
+│                               examples/ (a trailer and a Short of one job)
+├── scripts/                    cut.py, lint.py, type_layer.py, make_beat.py, beats.py, words.py, grade.py, cover.py
+├── assets/fonts/               Anton and Michroma (SIL OFL 1.1)
 └── evals/
 ```
 
@@ -285,6 +287,8 @@ wrote the original skill; the MIT copyright notice in [LICENSE](LICENSE) is thei
   [`LICENSES.md`](skills/editing-videos/library/LICENSES.md).
 - Graphics in `graphics/`: CC0 1.0, see [`LICENSES.md`](skills/editing-videos/graphics/LICENSES.md).
 - The meme reference ships no meme media; the originals belong to their owners.
-- The Anton font in `car-trailer/assets/fonts/`: SIL Open Font License 1.1, see
-  [`OFL.txt`](skills/car-trailer/assets/fonts/OFL.txt). Beats made with `make_beat.py` belong to whoever
+- The Anton and Michroma fonts in `car-trailer/assets/fonts/`: SIL Open Font License 1.1, see
+  [`OFL.txt`](skills/car-trailer/assets/fonts/OFL.txt) and
+  [`OFL-Michroma.txt`](skills/car-trailer/assets/fonts/OFL-Michroma.txt). Brand logos are not shipped: use the
+  file the brand or the person supplies. Beats made with `make_beat.py` belong to whoever
   makes them.
