@@ -88,6 +88,11 @@ list, caption files and instructions with numbers (`references/tools.md`).
 | A narrated software tutorial (screen recording) | [`recipes/narrated-screen-tutorial.md`](recipes/narrated-screen-tutorial.md) | The screen leads, honest speed, demo data, synthetic voice, chapter cards; tested templates (Playwright, ElevenLabs, HyperFrames) |
 | Something else (explainer, essay, review…) | none | Use the core: the pacing table has a row per type; borrow from the closest recipe |
 
+A car how-to (oil, filter, exhaust, jack work) yields to the car-edit rules when they conflict. Speech and
+corrections stay at 1×, repetitive wrenching at 8×, a view change at 4×, and the last clean take stays. No
+trailer in front of the job. A 3–5 s cold open of one payoff shot is allowed. A separate trailer is not
+**[house]**.
+
 ## Pacing at a glance
 
 The full table, with the source of each number, is in `references/pacing-and-cuts.md`.
@@ -167,9 +172,9 @@ node memes/search.mjs fail --risk low
 | `references/graphics-and-text.md` | When to use a graphic; anchored and never empty; text duration; captions and subtitles; zoom and punch-in; entrances; safe zones; legibility |
 | `references/audio-and-sfx.md` | Target levels; dialogue cleanup; room tone; music, ducking and how-to bed auditions; computing gains; sound effects; mastering |
 | `references/color.md` | Order of work; LUTs as a starting point; matching shots; SDR and HDR delivery |
-| `references/thumbnail-title-description.md` | Thumbnail spec and practices, A/B tests, title, description, hashtags, chapters |
+| `references/thumbnail-title-description.md` | Thumbnail spec and practices, A/B tests, title, description, hashtags, chapters; how-to title, thumb and upload pack |
 | `references/licenses.md` | Music, SFX and footage sources for a monetized channel; fair use; Content ID |
-| `references/tools.md` | Applying the craft in an NLE (EDL, markers, captions, instructions), ffmpeg, Remotion and HyperFrames |
+| `references/tools.md` | Applying the craft in an NLE (EDL, markers, captions, instructions), ffmpeg, Remotion and HyperFrames; 4K delivery and cleanup |
 | `review-checklist.md` | The universal review: measured, by eye, by ear, before publishing |
 | `recipes/talking-head.md` | Talking-head recipe and checklist |
 | `recipes/vlog.md` | Vlog recipe and checklist |

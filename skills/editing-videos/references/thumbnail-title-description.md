@@ -52,7 +52,7 @@ branding in an image editor or a design tool.
   **[utilhq, creator]**: that is where what the video teaches and the link to the written guide go.
 - **Chapters**: a list of timestamps from `00:00`, at least 3, each ≥ 10 s **[YT-chapters]**. They are
   copied from the edit's real times (markers exported from the NLE, or a timeline file the tool writes),
-  not measured by eye.
+  not measured by eye. Once a reviewer has watched an export, that file is the clock: see below.
 - **Hashtags**: YouTube shows up to 3 next to the title, and if there are **more than 60 it ignores all of
   them** **[YT-hashtags]**. Use 2–5 relevant ones.
 - **Audio credits**: if music from the YouTube Audio Library with a Creative Commons license was used, the
@@ -60,6 +60,20 @@ branding in an image editor or a design tool.
   credit.
 - **Corrections**: a `Correction:` line with the timestamp and the explanation, without re-uploading the
   video **[YT-limits]**.
+
+## A camera how-to (house)
+
+Learned finishing a 4K garage job **[house]**. Music beds stay in `audio-and-sfx.md`.
+
+- **The file the reviewer watched is the clock.** Chapters, titles and captions are generated from that
+  export and its SRT. A longer intermediate render is a different file. Do not invent chapter times.
+  Program time on the review movie is still not source time (`audio-and-sfx.md`).
+- **Title and thumbnail.** The YouTube title carries the search string (year, model, chassis code, the
+  job). On-image type is short. Match the channel's previous thumb: a real frame, a dark fade behind the
+  type so it reads, type and logo off the subject. Do not cover the car. A logo is the real mark with the
+  background removed, never a redraw and never a checkerboard baked in.
+- **Upload pack.** Next to the final export, one markdown file with copy-paste title, description, chapters
+  and tags.
 
 ## Sources
 
@@ -76,3 +90,6 @@ branding in an image editor or a design tool.
 - **[GrowthOS]**: https://growthos.in/blog/youtube-thumbnail-best-practices
 - **[Pixelbatch]**: https://pixelbatch.io/blog/youtube-thumbnail-size-guide
 - **[utilhq]**: https://utilhq.com/articles/youtube-character-limits-seo-guide/
+- **[house]**, a camera how-to: chapters, titles and captions from the export the reviewer watched; the
+  YouTube title carries the search string; the thumb matches the channel's previous frame (real frame,
+  dark fade, type and logo off the car, real logo); one markdown upload pack beside the export.

@@ -13,6 +13,7 @@ After the entry file, load only the recipe and references it names for that vide
 
 - Core: `references/` (pacing, hook, graphics and text, audio, color, publishing, licenses, tools) and `review-checklist.md`.
 - For a music bed on a how-to, follow `references/audio-and-sfx.md` (`Auditioning music for a how-to`).
+- A camera how-to keeps 4K when the camera is 4K, takes chapters from the export the reviewer watched, and yields to car-edit on pacing (`references/tools.md`, `references/thumbnail-title-description.md`).
 - One recipe: `recipes/talking-head.md`, `recipes/vlog.md`, `recipes/podcast-to-youtube.md`, `recipes/shorts-from-long-form.md`, or `recipes/narrated-screen-tutorial.md`.
 - Assets, searched then copied into the video project: `library/`, `graphics/`, and `memes/README.md` before `memes/catalog.json`.
 
