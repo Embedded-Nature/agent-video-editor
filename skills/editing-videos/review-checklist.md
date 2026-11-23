@@ -11,9 +11,10 @@ are in `references/`.
   ebur128=peak=true -f null -` or the NLE's loudness meter.
 - [ ] **Duration** of the export matches the timeline; no black frames or silence at the head or tail.
 - [ ] **Format**: the delivery resolution and frame rate, 9:16 for Shorts, SDR tagged as BT.709, audio at
-  48 kHz.
-- [ ] **Chapters** (long videos): from `00:00`, at least 3, ascending, each ≥ 10 s, taken from the edit's
-  real times.
+  48 kHz. When the camera is 3840×2160, the timeline and the YouTube export are 4K; 1080p is a preview
+  (`references/tools.md`).
+- [ ] **Chapters** (long videos): from `00:00`, at least 3, ascending, each ≥ 10 s, taken from the export
+  the reviewer watched and its SRT. Do not invent times.
 - [ ] **Captions**: no event shorter than 20 frames; ≤ 42 characters per line and ≤ 2 lines for standard
   captions; reading speed ≤ 20 characters/s.
 
@@ -55,4 +56,7 @@ the whole video; for a graphic, every 0.5 s from when it enters until it leaves.
 - [ ] Every track, effect and clip has a license that allows this use, and CC BY credits are in the
   description (`references/licenses.md`).
 - [ ] Title, thumbnail, description, chapters and captions ready
-  (`references/thumbnail-title-description.md`).
+  (`references/thumbnail-title-description.md`). For a camera how-to, the upload pack markdown sits next to
+  the final export.
+- [ ] Cleanup leaves `Movies/exports`, camera masters, and any sequence that is not finished. Agent renders
+  and segment encodes can go after publish.

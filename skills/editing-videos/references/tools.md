@@ -13,6 +13,7 @@ the tool wins on mechanics (file formats, APIs, rendering) and this skill wins o
 - [Remotion](#remotion)
 - [HyperFrames](#hyperframes)
 - [The same rule in each tool](#the-same-rule-in-each-tool)
+- [Delivery and cleanup](#delivery-and-cleanup)
 - [Sources](#sources)
 
 ## Which route fits
@@ -147,9 +148,23 @@ rules) is in [`hyperframes-generator.md`](../recipes/narrated-screen-tutorial/hy
 | Captions | Import `.srt`, style in the captions track | `subtitles=` filter | `@remotion/captions` | A caption track per `hyperframes-studio` |
 | Master to -14 LUFS | Loudness meter + limiter on the master | Two-pass `loudnorm` | Render, then ffmpeg | Render, then ffmpeg |
 
+## Delivery and cleanup
+
+Learned finishing a 4K garage job **[house]**. The editable master stays the timeline (the FCPXML or the
+NLE project); see `audio-and-sfx.md`.
+
+- **Resolution.** If the camera files are 3840×2160, the editable timeline and the YouTube export stay 4K.
+  A 1080p render is a preview. Exporting a 1080 timeline cannot be upscaled back to the camera.
+- **Cleanup.** Agent renders and segment encodes can be trashed after publish. Never trash `Movies/exports`,
+  camera masters, or a sequence that is not finished. On the job that set this, the exhaust cut was deleted
+  with the finished oil and filter renders and had to be restored.
+
 ## Sources
 
 - **[Remotion]**: Remotion docs, `<Audio>` and `<OffthreadVideo>` (`trimBefore`, `durationInFrames`, `volume` as a function), and `@remotion/captions` (`parseSrt`, `createTikTokStyleCaptions`). https://www.remotion.dev/docs/
 - **[HyperFrames skills]**: `hyperframes/SKILL.md`, `general-video/SKILL.md`, `hyperframes-core`, `hyperframes-audio` ("Voiceover carve"), `hyperframes-cli`, `hyperframes-studio` § 4. https://github.com/heygen-com/hyperframes
 - **ffmpeg filters**: https://ffmpeg.org/ffmpeg-filters.html (`subtitles`, `crop`, `sidechaincompress`, `amix`, `loudnorm`, `ebur128`, `silencedetect`).
 - **CMX3600 EDL**: the event format (event, reel, track, transition, source in/out, record in/out) is the one Premiere and Resolve import; check your NLE's import options for frame rate and reel names.
+- **[house]**, delivery and cleanup: a 3840×2160 camera stays 4K on the timeline and the YouTube export; a
+  1080p render is a preview. After publish, only agent renders and segment encodes are trash. `Movies/exports`,
+  camera masters, and an unfinished sequence stay.

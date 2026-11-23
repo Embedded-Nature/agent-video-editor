@@ -88,6 +88,11 @@ list, caption files and instructions with numbers (`references/tools.md`).
 | A narrated software tutorial (screen recording) | [`recipes/narrated-screen-tutorial.md`](recipes/narrated-screen-tutorial.md) | The screen leads, honest speed, demo data, synthetic voice, chapter cards; tested templates (Playwright, ElevenLabs, HyperFrames) |
 | Something else (explainer, essay, review…) | none | Use the core: the pacing table has a row per type; borrow from the closest recipe |
 
+A car how-to (oil, filter, exhaust, jack work) yields to the car-edit rules when they conflict. Speech and
+corrections stay at 1×, repetitive wrenching at 8×, a view change at 4×, and the last clean take stays. No
+trailer in front of the job. A 3–5 s cold open of one payoff shot is allowed. A separate trailer is not
+**[house]**.
+
 ## Pacing at a glance
 
 The full table, with the source of each number, is in `references/pacing-and-cuts.md`.
@@ -104,7 +109,9 @@ The full table, with the source of each number, is in `references/pacing-and-cut
 ## Audio at a glance
 
 - **Master**: -14 LUFS, ≤ -1 dBTP for YouTube; upload AAC at 48 kHz.
-- **Music** 18–25 dB under the voice, ducked 6–12 dB while someone talks.
+- **Music** 18–25 dB under the voice, ducked 6–12 dB while someone talks. A how-to auditions two or three
+  isolated beds first; a car or garage job defaults to a melodic, bass-forward pocket. MusicGen medium is
+  CC BY-NC and stays off YouTube (`references/audio-and-sfx.md`).
 - **Sound effects** 12–24 dB under the voice, one per on-screen event, the transient 2–4 frames before it.
 - **Gains from measured levels**: `gain = 10^((voice_lufs - under_voice - sound_lufs)/20)`, capped at 1.
 
@@ -163,11 +170,11 @@ node memes/search.mjs fail --risk low
 | `references/pacing-and-cuts.md` | Pacing table by video type with sources; what a cut is for; shot length; J and L cuts; jump cuts; b-roll; transitions; segmentation |
 | `references/hook-and-retention.md` | How YouTube measures retention; the hook by type; open loops; chapters; end screen and closing |
 | `references/graphics-and-text.md` | When to use a graphic; anchored and never empty; text duration; captions and subtitles; zoom and punch-in; entrances; safe zones; legibility |
-| `references/audio-and-sfx.md` | Target levels; dialogue cleanup; room tone; music and ducking; computing gains; sound effects; mastering |
+| `references/audio-and-sfx.md` | Target levels; dialogue cleanup; room tone; music, ducking and how-to bed auditions; computing gains; sound effects; mastering |
 | `references/color.md` | Order of work; LUTs as a starting point; matching shots; SDR and HDR delivery |
-| `references/thumbnail-title-description.md` | Thumbnail spec and practices, A/B tests, title, description, hashtags, chapters |
+| `references/thumbnail-title-description.md` | Thumbnail spec and practices, A/B tests, title, description, hashtags, chapters; how-to title, thumb and upload pack |
 | `references/licenses.md` | Music, SFX and footage sources for a monetized channel; fair use; Content ID |
-| `references/tools.md` | Applying the craft in an NLE (EDL, markers, captions, instructions), ffmpeg, Remotion and HyperFrames |
+| `references/tools.md` | Applying the craft in an NLE (EDL, markers, captions, instructions), ffmpeg, Remotion and HyperFrames; 4K delivery and cleanup |
 | `review-checklist.md` | The universal review: measured, by eye, by ear, before publishing |
 | `recipes/talking-head.md` | Talking-head recipe and checklist |
 | `recipes/vlog.md` | Vlog recipe and checklist |
