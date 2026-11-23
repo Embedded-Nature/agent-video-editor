@@ -9,7 +9,7 @@
     {
       "name": "agent-video-editor",
       "description": "An editor's judgment for any video, for AI agents: pacing and cuts, hooks, captions, graphics, audio levels, color, thumbnails and licensing, with recipes for talking heads, vlogs, podcasts, Shorts and screen tutorials, a CC0 sound library, a CC0 graphics kit for HyperFrames and a meme reference. Adds car-trailer: a beat-cut 16:9 trailer and 9:16 Short from a finished car how-to, with a lint that fails a cut that skips steps or drags.",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "source": "./",
       "category": "productivity"
     }

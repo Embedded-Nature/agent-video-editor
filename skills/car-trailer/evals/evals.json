@@ -24,6 +24,12 @@
       "prompt": "The transcript has the line 'let's take this shroud off' at 43 s. Use it as the first voice line.",
       "expected_output": "Measures the line in the export with volumedetect before using it; if it is far quieter than the host's other lines (about 6 dB or more) it would vanish under the beat, so it picks another line and says why.",
       "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Make a thumbnail for the Short and color correct the video to match it.",
+      "expected_output": "Looks at the covers of trending Shorts for the car and job before designing. Leads the cover with the car (model as the headline) and the upgrade, uses the brand's official logo (asks for it, reverses it for a dark ground) rather than the brand name typed in colour, letters it in Michroma and says the maker's own typeface is not licensed. Builds 3-4 options with cover.py and keeps the type below the part. Grades the bare picture with grade.py (full look on the opening shot, about 60% after) in a copy of the HyperFrames project, changes the opening label to the cover's wording, runs check --safe-zone shorts, and renders beside the untouched original with a side-by-side for the person to choose.",
+      "files": []
     }
   ]
 }
