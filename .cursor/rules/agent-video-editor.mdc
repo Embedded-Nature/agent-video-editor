@@ -5,7 +5,9 @@ alwaysApply: true
 
 # Editing videos
 
-This repository is only the `editing-videos` skill. There is no other Cursor rule and no `AGENTS.md`.
+This repository holds two skills: `editing-videos` (any video) and `car-trailer` (a beat-cut trailer or Short from a finished car how-to). There is no other Cursor rule and no `AGENTS.md`.
+
+For a trailer, teaser, promo, Short, Reel or TikTok of a car how-to, read `skills/car-trailer/SKILL.md` and follow it; it runs `scripts/cut.py`, whose lint must pass before the type layer.
 
 For any request to plan, edit, cut, grade, caption, or finish a video — including automotive and how-to footage — read `skills/editing-videos/SKILL.md` first and follow it. Do not improvise a different pipeline. On tool mechanics, the tool's own docs win; on editorial decisions, this skill does.
 

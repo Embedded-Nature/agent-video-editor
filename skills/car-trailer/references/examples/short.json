@@ -1,0 +1,742 @@
+{
+ "source": "/path/to/finished export.mov",
+ "ffmpeg": "ffmpeg",
+ "width": 1080,
+ "height": 1920,
+ "fps": "30000/1001",
+ "layout": "portrait",
+ "bed": {
+  "file": "../music/drift-phonk-original.wav",
+  "beats": "../music/drift-phonk-original.beats.json",
+  "play": [
+   [
+    16,
+    null
+   ]
+  ],
+  "xfade": 0.2,
+  "gain_db": -9,
+  "lufs": -14
+ },
+ "end_card": {
+  "kicker": "2017 PANAMERA TURBO",
+  "title": "FULL HOW-TO ON THE CHANNEL",
+  "line": "NEXT UP:",
+  "accent": "SECONDARY CATS"
+ },
+ "steps": [
+  {
+   "name": "Plastic shrouds off",
+   "src": [
+    40,
+    150
+   ],
+   "skip": "Short: the bumper and air box tell the job; shrouds cut for time"
+  },
+  {
+   "name": "Wheels off, Quick Jack reset",
+   "src": [
+    150,
+    240
+   ]
+  },
+  {
+   "name": "Unplug the lights",
+   "src": [
+    240,
+    330
+   ]
+  },
+  {
+   "name": "Pry the clips",
+   "src": [
+    330,
+    380
+   ]
+  },
+  {
+   "name": "Bumper off",
+   "src": [
+    380,
+    405
+   ]
+  },
+  {
+   "name": "Metal shroud: M30 + T30s",
+   "src": [
+    405,
+    440
+   ]
+  },
+  {
+   "name": "Air box out: five T20s",
+   "src": [
+    440,
+    459
+   ]
+  },
+  {
+   "name": "Paper filter out",
+   "src": [
+    459,
+    495
+   ]
+  },
+  {
+   "name": "Pre-oiled BMC in",
+   "src": [
+    495,
+    580
+   ]
+  },
+  {
+   "name": "Bumper back on",
+   "src": [
+    580,
+    640
+   ]
+  },
+  {
+   "name": "Anti-seize, wheels on",
+   "src": [
+    640,
+    658
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "kind": "voice",
+   "src": [
+    [
+     1.5,
+     4.6
+    ]
+   ],
+   "frame": {
+    "mode": "crop",
+    "center": 0.38,
+    "pan_to": 0.58,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "2017 PANAMERA TURBO",
+    "main": "THE AIR FILTER IS BEHIND THE BUMPER?!",
+    "sub": "",
+    "hook": true
+   },
+   "words": [
+    [
+     "Install",
+     1.58
+    ],
+    [
+     "a",
+     2.14
+    ],
+    [
+     "new",
+     3.06
+    ],
+    [
+     "air",
+     3.2
+    ],
+    [
+     "filter",
+     3.38
+    ],
+    [
+     "in",
+     3.7
+    ],
+    [
+     "the",
+     4.02
+    ],
+    [
+     "Panamera",
+     4.1,
+     4.54
+    ]
+   ],
+   "hot": [
+    "filter",
+    "panamera"
+   ]
+  },
+  {
+   "kind": "pic",
+   "min": 1.8,
+   "src": [
+    [
+     36.0,
+     null
+    ]
+   ],
+   "speed": 1,
+   "frame": {
+    "mode": "crop",
+    "center": 0.55,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "THE UPGRADE",
+    "main": "BMC FILTER",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "voice",
+   "src": [
+    [
+     108.0,
+     110.66
+    ]
+   ],
+   "frame": {
+    "mode": "crop",
+    "center": 0.45,
+    "pan_to": 0.7,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "WAIT...",
+    "main": "IT ALL COMES OFF",
+    "sub": ""
+   },
+   "words": [
+    [
+     "It's",
+     108.1
+    ],
+    [
+     "interesting",
+     108.58
+    ],
+    [
+     "that",
+     109.1
+    ],
+    [
+     "we",
+     109.28
+    ],
+    [
+     "have",
+     109.36
+    ],
+    [
+     "to",
+     109.44
+    ],
+    [
+     "take",
+     109.54
+    ],
+    [
+     "the",
+     109.74
+    ],
+    [
+     "bumper",
+     109.88
+    ],
+    [
+     "off",
+     110.2,
+     110.58
+    ]
+   ],
+   "hot": [
+    "bumper",
+    "off"
+   ]
+  },
+  {
+   "kind": "pic",
+   "min": 1.45,
+   "src": [
+    [
+     153.0,
+     null
+    ]
+   ],
+   "speed": 4,
+   "frame": {
+    "mode": "fit",
+    "center": 0.5,
+    "zoom": 1.35
+   },
+   "label": {
+    "kicker": "STEP 1",
+    "main": "WHEELS OFF",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "pic",
+   "min": 1.5,
+   "src": [
+    [
+     249.5,
+     null
+    ]
+   ],
+   "speed": 2,
+   "frame": {
+    "mode": "crop",
+    "center": 0.55,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "STEP 2",
+    "main": "UNPLUG THE LIGHTS",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "pic",
+   "min": 1.5,
+   "src": [
+    [
+     336.0,
+     null
+    ]
+   ],
+   "speed": 4,
+   "frame": {
+    "mode": "crop",
+    "center": 0.45,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "STEP 3",
+    "main": "PRY THE CLIPS",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "voice",
+   "src": [
+    [
+     387.8,
+     389.25
+    ],
+    [
+     390.25,
+     391.36
+    ]
+   ],
+   "frame": {
+    "mode": "crop",
+    "center": 0.62,
+    "pan_to": 0.42,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "STEP 4",
+    "main": "BUMPER OFF",
+    "sub": "",
+    "flash": true
+   },
+   "words": [
+    [
+     "Honestly",
+     387.82
+    ],
+    [
+     "if",
+     388.22
+    ],
+    [
+     "you",
+     388.42
+    ],
+    [
+     "just",
+     388.46
+    ],
+    [
+     "wiggle",
+     388.64
+    ],
+    [
+     "it...",
+     388.98,
+     389.22
+    ],
+    [
+     "it",
+     390.3
+    ],
+    [
+     "will",
+     390.7
+    ],
+    [
+     "come",
+     390.82
+    ],
+    [
+     "off",
+     390.98,
+     391.28
+    ]
+   ],
+   "hot": [
+    "wiggle",
+    "off"
+   ]
+  },
+  {
+   "kind": "pic",
+   "min": 1.95,
+   "src": [
+    [
+     410.0,
+     null
+    ]
+   ],
+   "speed": 4,
+   "frame": {
+    "mode": "crop",
+    "center": 0.5,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "STEP 5",
+    "main": "METAL SHROUD",
+    "sub": "M30 + T30s"
+   }
+  },
+  {
+   "kind": "pic",
+   "min": 2.0,
+   "src": [
+    [
+     444.0,
+     null
+    ]
+   ],
+   "speed": 6,
+   "frame": {
+    "mode": "fit",
+    "center": 0.5,
+    "zoom": 1.6
+   },
+   "label": {
+    "kicker": "STEP 6",
+    "main": "AIR BOX OUT",
+    "sub": "five T20s"
+   }
+  },
+  {
+   "kind": "pic",
+   "min": 1.9,
+   "src": [
+    [
+     459.0,
+     null
+    ]
+   ],
+   "speed": 3,
+   "frame": {
+    "mode": "fit",
+    "center": 0.57,
+    "zoom": 1.5
+   },
+   "label": {
+    "kicker": "STOCK vs UPGRADE",
+    "main": "PAPER vs BMC",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "voice",
+   "src": [
+    [
+     485.95,
+     487.66
+    ],
+    [
+     489.2,
+     491.3
+    ]
+   ],
+   "frame": {
+    "mode": "fit",
+    "center": 0.57,
+    "zoom": 1.5
+   },
+   "label": {
+    "kicker": "WHY SWITCH",
+    "main": "SAVE YOUR TURBOS",
+    "sub": ""
+   },
+   "words": [
+    [
+     "this",
+     486.32
+    ],
+    [
+     "paper",
+     486.46
+    ],
+    [
+     "stuff",
+     486.74
+    ],
+    [
+     "is",
+     487.04
+    ],
+    [
+     "not",
+     487.24
+    ],
+    [
+     "good",
+     487.4,
+     487.6
+    ],
+    [
+     "wait",
+     489.24
+    ],
+    [
+     "too",
+     489.42
+    ],
+    [
+     "long,",
+     489.62
+    ],
+    [
+     "the",
+     489.88
+    ],
+    [
+     "paper",
+     490.02
+    ],
+    [
+     "can",
+     490.26
+    ],
+    [
+     "clog",
+     490.42
+    ],
+    [
+     "your",
+     490.64
+    ],
+    [
+     "turbos",
+     490.82,
+     491.26
+    ]
+   ],
+   "hot": [
+    "clog",
+    "turbos"
+   ]
+  },
+  {
+   "kind": "pic",
+   "min": 1.5,
+   "src": [
+    [
+     501.0,
+     null
+    ]
+   ],
+   "speed": 2,
+   "frame": {
+    "mode": "fit",
+    "center": 0.57,
+    "zoom": 1.5
+   },
+   "label": {
+    "kicker": "STEP 7",
+    "main": "PRE-OILED BMC",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "pic",
+   "min": 1.5,
+   "src": [
+    [
+     584.0,
+     null
+    ]
+   ],
+   "speed": 3,
+   "frame": {
+    "mode": "crop",
+    "center": 0.72,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "STEP 8",
+    "main": "BUMPER BACK ON",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "pic",
+   "min": 1.9,
+   "src": [
+    [
+     642.0,
+     null
+    ]
+   ],
+   "speed": 2,
+   "frame": {
+    "mode": "crop",
+    "center": 0.55,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "PRO TIP",
+    "main": "ANTI-SEIZE LUGS",
+    "sub": ""
+   }
+  },
+  {
+   "kind": "voice",
+   "src": [
+    [
+     659.75,
+     662.9
+    ]
+   ],
+   "frame": {
+    "mode": "crop",
+    "center": 0.78,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "DONE",
+    "main": "FILTER: IN",
+    "sub": "",
+    "flash": true
+   },
+   "words": [
+    [
+     "Everything",
+     660.0
+    ],
+    [
+     "is",
+     660.32
+    ],
+    [
+     "in,",
+     660.5,
+     660.92
+    ],
+    [
+     "put",
+     661.3
+    ],
+    [
+     "the",
+     661.78
+    ],
+    [
+     "air",
+     661.9
+    ],
+    [
+     "filter",
+     662.06
+    ],
+    [
+     "in",
+     662.4,
+     662.82
+    ]
+   ],
+   "hot": [
+    "in",
+    "filter"
+   ]
+  },
+  {
+   "kind": "last",
+   "src": [
+    [
+     669.43,
+     673.3
+    ]
+   ],
+   "frame": {
+    "mode": "crop",
+    "center": 0.5,
+    "zoom": 1.0
+   },
+   "label": {
+    "kicker": "NEXT UP",
+    "main": "SECONDARY CATS",
+    "sub": ""
+   },
+   "words": [
+    [
+     "get",
+     669.84
+    ],
+    [
+     "this",
+     670.08
+    ],
+    [
+     "car",
+     670.28
+    ],
+    [
+     "ready",
+     670.5
+    ],
+    [
+     "for",
+     670.8
+    ],
+    [
+     "the",
+     671.08
+    ],
+    [
+     "secondary",
+     671.26
+    ],
+    [
+     "cat.",
+     671.68,
+     672.12
+    ],
+    [
+     "Stay",
+     672.42
+    ],
+    [
+     "tuned.",
+     672.94,
+     673.14
+    ]
+   ],
+   "hot": [
+    "secondary",
+    "cat",
+    "tuned"
+   ]
+  },
+  {
+   "kind": "end",
+   "min": 3.4
+  }
+ ]
+}

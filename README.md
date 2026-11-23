@@ -54,8 +54,8 @@ npx skills add kmilo93sd/agent-video-editor
 /plugin install agent-video-editor@agent-video-editor
 ```
 
-**By hand:** copy `skills/editing-videos/` into your agent's skills folder (in Claude Code,
-`~/.claude/skills/`).
+**By hand:** copy `skills/editing-videos/` (and `skills/car-trailer/` if you want car promos) into your
+agent's skills folder (in Claude Code, `~/.claude/skills/`).
 
 Then ask the agent things like:
 
@@ -68,6 +68,8 @@ Then ask the agent things like:
 
 > Check the pacing of this software tutorial, then find a soft whoosh and a calm music bed and tell me how
 > loud they go under the voice.
+
+> Make a 50-second trailer and a Short for my oil change how-to. Make it fun, like a viral video.
 
 ## What it does
 
@@ -100,6 +102,24 @@ copied into the project.
 | **Sound library** | 128 CC0 sounds and music tracks, measured in LUFS, with a search tool that computes how loud each one goes under your voice. |
 | **Graphics kit** | 26 CC0 animated graphics for HyperFrames: arrows, highlights, callouts, lower third, progress, chapter cards, end screen and more. |
 | **Meme reference** | 59 memes and meme formats: what they mean, when they fit, how to recreate them without the original, and their Content ID risk. No media. |
+
+### Car trailer and Short (`car-trailer`)
+
+A second skill for one job: cutting a promo from a finished car how-to export, as a 16:9 YouTube trailer, a
+9:16 Short / Reel / TikTok, or both. It was built after a trailer was rejected because "the shots were out of
+order and it never said what the viewer was looking at", and every rule in it stops that from happening again.
+
+| | |
+|---|---|
+| **How-to order, every step shown** | The spec lists the job's steps with their source times before any shot; every step gets a shot, in order. |
+| **A label on every shot** | `STEP n` + the action, a spec line (socket, torque, quarts) only when the video shows or says it. |
+| **The host at 1x, captioned** | 4-7 short lines, cut on word boundaries, word-by-word captions; sped-up spans are muted. |
+| **Every cut on the beat** | Beat maps for any track, or an original drift-phonk bed synthesised from scratch (`make_beat.py`) with an exact grid, so the music is the channel's own. |
+| **9:16 recomposed, not squeezed** | Crop aimed at the hands for close work, full frame over a blurred fill for wide shots, all type inside the Shorts safe zone. |
+| **A lint that fails a bad cut** | `cut.py` ends with `lint.py`: a step with no shot, shots out of order, a label missing or a `STEP` number skipped, a voice shot over 4 s, a picture shot over 2.7 s, or the host's lines filling more than half the running time fails the cut. |
+
+It renders the type layer with [HyperFrames](https://github.com/heygen-com/hyperframes). Its music guidance is
+for a promo, where the bed is louder than under a full how-to (the voice still sits at least 10 dB over it).
 
 ## The rules
 
@@ -209,6 +229,13 @@ skills/editing-videos/
 ├── graphics/                   CC0 HyperFrames graphics: catalog, search, preview, check, licenses
 ├── memes/                      meme reference (no media): catalog, search, README
 └── evals/                      cases with what the agent should answer
+
+skills/car-trailer/
+├── SKILL.md                    entry point: non-negotiables, workflow, framing a Short
+├── references/                 spec.md (every spec field) and examples/ (a trailer and a Short of one job)
+├── scripts/                    cut.py, lint.py, type_layer.py, make_beat.py, beats.py, words.py
+├── assets/fonts/               Anton (SIL OFL 1.1)
+└── evals/
 ```
 
 The skill follows the [Agent Skills specification](https://agentskills.io/specification) and
@@ -244,6 +271,7 @@ skill:
 
 ```bash
 npx skills-ref validate ./skills/editing-videos
+npx skills-ref validate ./skills/car-trailer
 ```
 
 ## License
@@ -253,3 +281,6 @@ npx skills-ref validate ./skills/editing-videos
   [`LICENSES.md`](skills/editing-videos/library/LICENSES.md).
 - Graphics in `graphics/`: CC0 1.0, see [`LICENSES.md`](skills/editing-videos/graphics/LICENSES.md).
 - The meme reference ships no meme media; the originals belong to their owners.
+- The Anton font in `car-trailer/assets/fonts/`: SIL Open Font License 1.1, see
+  [`OFL.txt`](skills/car-trailer/assets/fonts/OFL.txt). Beats made with `make_beat.py` belong to whoever
+  makes them.

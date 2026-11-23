@@ -1,0 +1,29 @@
+{
+  "skill_name": "car-trailer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make a 50-second trailer for my Panamera oil change how-to. Make it fun, like a viral video.",
+      "expected_output": "Reads the transcript, chapters and frames before cutting and states the job's steps in order. Writes the spec's `steps`, gives every step a shot in how-to order, labels every shot with what is on screen (STEP n counted 1, 2, 3), uses 4-7 of the host's lines at 1x of 1.5-4 s each, keeps picture shots about 2 s, cuts on the beat of a licensed or self-made phonk bed, and passes cut.py's lint and the HyperFrames check before rendering.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Use the orchestral CC0 track in music/ for the trailer bed, it already has a beat map.",
+      "expected_output": "Points out that a car channel's trailer usually wants an underground car sound (drift phonk / trap) and that an existing beat map is not a reason to pick a bed; offers a track the person picks or an original from make_beat.py, and records the license either way.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Turn the trailer into a Short for YouTube Shorts.",
+      "expected_output": "Recomposes for 9:16 rather than squeezing: crop aimed at the hands for close work, fit over a blurred fill for wide shots; a hook label on screen at frame 0; every word inside y 288-1248, x 120-888; shorter shots (1.5-2.2 s); drops a step only with a written skip reason; runs check --safe-zone shorts and fixes every line_unread.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "The transcript has the line 'let's take this shroud off' at 43 s. Use it as the first voice line.",
+      "expected_output": "Measures the line in the export with volumedetect before using it; if it is far quieter than the host's other lines (about 6 dB or more) it would vanish under the beat, so it picks another line and says why.",
+      "files": []
+    }
+  ]
+}
