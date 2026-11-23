@@ -16,6 +16,7 @@ Thanks for wanting to improve the skill. To keep the guidance trustworthy:
 
    ```bash
    npx skills-ref validate ./skills/editing-videos
+   npx skills-ref validate ./skills/car-trailer
    node skills/editing-videos/library/verify.mjs      # if you touched the sound library (needs ffmpeg)
    node skills/editing-videos/graphics/build-preview.mjs && node skills/editing-videos/graphics/check.mjs
    ```
