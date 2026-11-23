@@ -16,9 +16,9 @@ compatibility: >
   on the PATH, Playwright for recording, an ElevenLabs key for the voice, and HyperFrames for editing and
   rendering. The search tools of the sound library, the graphics kit and the meme reference need Node.
 metadata:
-  author: kmilo93sd
+  author: Embedded-Nature (forked from kmilo93sd)
   version: "2.0.0"
-  repository: https://github.com/kmilo93sd/agent-video-editor
+  repository: https://github.com/Embedded-Nature/agent-video-editor
 ---
 
 # Editing videos
@@ -37,8 +37,8 @@ or skills rule; on editorial matters, this skill does. `references/tools.md` map
 
 A Final Cut timeline has one path, the same one in `references/tools.md`: write it with
 [fcp-mcp-server](https://github.com/DareDev256/fcp-mcp-server), then stop. Do not hand-author the XML.
-The user imports it in Final Cut and exports 4K. Panamera's existing `render.py` still imports the old
-dreliq9 `fcp_mcp` package; new work must not copy that pattern.
+The user imports it in Final Cut and exports 4K. Do not use the older dreliq9 `fcp_mcp` package for new
+work.
 
 ## Process
 
@@ -94,10 +94,10 @@ fcp-mcp-server path above, then stops.
 | A narrated software tutorial (screen recording) | [`recipes/narrated-screen-tutorial.md`](recipes/narrated-screen-tutorial.md) | The screen leads, honest speed, demo data, synthetic voice, chapter cards; tested templates (Playwright, ElevenLabs, HyperFrames) |
 | Something else (explainer, essay, review…) | none | Use the core: the pacing table has a row per type; borrow from the closest recipe |
 
-A car how-to (oil, filter, exhaust, jack work) yields to the car-edit rules when they conflict. Speech and
-corrections stay at 1×, repetitive wrenching at 8×, a view change at 4×, and the last clean take stays. No
-trailer in front of the job. A 3–5 s cold open of one payoff shot is allowed. A separate trailer is not
-**[house]**.
+A car how-to (oil, filter, exhaust, jack work) has its own pacing, which wins when it conflicts with the
+table above: speech and corrections stay at 1×, repetitive wrenching at 8×, a view change at 4×, and the
+last clean take stays. No trailer in front of the job; a 3–5 s cold open of one payoff shot is allowed. A
+trailer or Short of the job is a separate video, made with the `car-trailer` skill **[house]**.
 
 ## Pacing at a glance
 

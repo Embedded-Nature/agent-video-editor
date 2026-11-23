@@ -65,9 +65,8 @@ the cuts, and hand back something the NLE imports.
 - **Final Cut Pro**: magnetic timeline, multicam clips with an angle editor, roles for audio stems.
   FCPXML is its interchange format. Write that timeline with
   [fcp-mcp-server](https://github.com/DareDev256/fcp-mcp-server), then stop. Do not hand-author the
-  XML. The user imports it in Final Cut and exports 4K. Panamera's existing `scripts/render.py`
-  still imports `fcp_mcp` from the old [dreliq9/fcp-mcp](https://github.com/dreliq9/fcp-mcp)
-  package. New work must not copy that pattern.
+  XML. The user imports it in Final Cut and exports 4K. Do not use the older
+  [dreliq9/fcp-mcp](https://github.com/dreliq9/fcp-mcp) package for new work.
 - **CapCut**: auto captions and templates aimed at vertical; good for Shorts, limited for long edits.
 
 Feature names and menus change between versions. When giving instructions, say which version you assume,

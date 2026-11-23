@@ -44,13 +44,13 @@ Cut Pro, CapCut, ffmpeg, Remotion or HyperFrames.
 **With [`skills`](https://github.com/vercel-labs/skills)**, for any compatible agent:
 
 ```bash
-npx skills add kmilo93sd/agent-video-editor
+npx skills add Embedded-Nature/agent-video-editor
 ```
 
 **As a Claude Code plugin:**
 
 ```text
-/plugin marketplace add kmilo93sd/agent-video-editor
+/plugin marketplace add Embedded-Nature/agent-video-editor
 /plugin install agent-video-editor@agent-video-editor
 ```
 
@@ -275,6 +275,10 @@ npx skills-ref validate ./skills/car-trailer
 ```
 
 ## License
+
+This is a fork of [kmilo93sd/agent-video-editor](https://github.com/kmilo93sd/agent-video-editor), which
+wrote the original skill; the MIT copyright notice in [LICENSE](LICENSE) is theirs and stays.
+
 
 - Code and text: [MIT](LICENSE).
 - Sounds in `library/`: CC0 1.0, with each one's source in
