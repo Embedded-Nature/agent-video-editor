@@ -63,14 +63,11 @@ the cuts, and hand back something the NLE imports.
 - **DaVinci Resolve**: the Cut and Edit pages for editing, Color page with scopes and color management,
   Fairlight for audio; multicam clips; a scripting API for automation where available.
 - **Final Cut Pro**: magnetic timeline, multicam clips with an angle editor, roles for audio stems.
-  FCPXML is its interchange format. Write and edit that timeline with
-  [fcp-mcp-server](https://github.com/DareDev256/fcp-mcp-server): clips, lanes, audio on lanes
-  separate from picture, and a 4K format, saved as an importable XML file. It is for writing and
-  importing FCPXML, not a remote control for the Final Cut UI. Do not reimplement FCPXML. Do not
-  drive Finder or AppleScript to build a timeline. Do not enumerate Trash or large folders through
-  Finder. The handoff stays: the user imports the XML in Final Cut and exports 4K. The PyPI package
-  `fcp-mcp` (import `fcp_mcp`, [dreliq9/fcp-mcp](https://github.com/dreliq9/fcp-mcp)) is a different
-  library; do not start a second FCPXML implementation beside `fcp-mcp-server`.
+  FCPXML is its interchange format. Write that timeline with
+  [fcp-mcp-server](https://github.com/DareDev256/fcp-mcp-server), then stop. Do not hand-author the
+  XML. The user imports it in Final Cut and exports 4K. Panamera's existing `scripts/render.py`
+  still imports `fcp_mcp` from the old [dreliq9/fcp-mcp](https://github.com/dreliq9/fcp-mcp)
+  package. New work must not copy that pattern.
 - **CapCut**: auto captions and templates aimed at vertical; good for Shorts, limited for long edits.
 
 Feature names and menus change between versions. When giving instructions, say which version you assume,
@@ -172,7 +169,7 @@ NLE project); see `audio-and-sfx.md`.
 - **[HyperFrames skills]**: `hyperframes/SKILL.md`, `general-video/SKILL.md`, `hyperframes-core`, `hyperframes-audio` ("Voiceover carve"), `hyperframes-cli`, `hyperframes-studio` § 4. https://github.com/heygen-com/hyperframes
 - **ffmpeg filters**: https://ffmpeg.org/ffmpeg-filters.html (`subtitles`, `crop`, `sidechaincompress`, `amix`, `loudnorm`, `ebur128`, `silencedetect`).
 - **CMX3600 EDL**: the event format (event, reel, track, transition, source in/out, record in/out) is the one Premiere and Resolve import; check your NLE's import options for frame rate and reel names.
-- **[fcp-mcp-server]**: https://github.com/DareDev256/fcp-mcp-server — existing FCPXML MCP (MIT). Write the timeline file; the user imports it in Final Cut and exports 4K.
+- **[fcp-mcp-server]**: https://github.com/DareDev256/fcp-mcp-server — write the Final Cut timeline with this server, then stop. The user imports the XML in Final Cut and exports 4K.
 - **[house]**, delivery and cleanup: a 3840×2160 camera stays 4K on the timeline and the YouTube export; a
   1080p render is a preview. After publish, only agent renders and segment encodes are trash. `Movies/exports`,
   camera masters, and an unfinished sequence stay.

@@ -35,6 +35,11 @@ reviewing real cuts). It is organized in two layers:
 It does not replace the tool. On mechanics (file formats, APIs, a renderer's contract), the tool's own docs
 or skills rule; on editorial matters, this skill does. `references/tools.md` maps the craft onto each tool.
 
+A Final Cut timeline has one path, the same one in `references/tools.md`: write it with
+[fcp-mcp-server](https://github.com/DareDev256/fcp-mcp-server), then stop. Do not hand-author the XML.
+The user imports it in Final Cut and exports 4K. Panamera's existing `render.py` still imports the old
+dreliq9 `fcp_mcp` package; new work must not copy that pattern.
+
 ## Process
 
 | # | Step | What happens | Read |
@@ -51,7 +56,8 @@ or skills rule; on editorial matters, this skill does. `references/tools.md` map
 | 10 | **Publishing** | Title, thumbnail, description, chapters, captions, credits | `references/thumbnail-title-description.md`, `references/licenses.md` |
 
 If the agent cannot touch the editor, it still does steps 1–8 as decisions: an edit decision list, a marker
-list, caption files and instructions with numbers (`references/tools.md`).
+list, caption files and instructions with numbers (`references/tools.md`). A Final Cut job uses the
+fcp-mcp-server path above, then stops.
 
 ## Hard rules (any video, any tool)
 
@@ -174,7 +180,7 @@ node memes/search.mjs fail --risk low
 | `references/color.md` | Order of work; LUTs as a starting point; matching shots; SDR and HDR delivery |
 | `references/thumbnail-title-description.md` | Thumbnail spec and practices, A/B tests, title, description, hashtags, chapters; how-to title, thumb and upload pack |
 | `references/licenses.md` | Music, SFX and footage sources for a monetized channel; fair use; Content ID |
-| `references/tools.md` | Applying the craft in an NLE (EDL, markers, captions, instructions), ffmpeg, Remotion and HyperFrames; 4K delivery and cleanup |
+| `references/tools.md` | Applying the craft in an NLE (EDL, markers, captions, instructions), ffmpeg, Remotion and HyperFrames; Final Cut timelines via fcp-mcp-server, then stop; 4K delivery and cleanup |
 | `review-checklist.md` | The universal review: measured, by eye, by ear, before publishing |
 | `recipes/talking-head.md` | Talking-head recipe and checklist |
 | `recipes/vlog.md` | Vlog recipe and checklist |

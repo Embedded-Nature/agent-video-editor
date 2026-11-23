@@ -14,6 +14,7 @@ After the entry file, load only the recipe and references it names for that vide
 - Core: `references/` (pacing, hook, graphics and text, audio, color, publishing, licenses, tools) and `review-checklist.md`.
 - For a music bed on a how-to, follow `references/audio-and-sfx.md` (`Auditioning music for a how-to`).
 - A camera how-to keeps 4K when the camera is 4K, takes chapters from the export the reviewer watched, and yields to car-edit on pacing (`references/tools.md`, `references/thumbnail-title-description.md`).
+- A Final Cut timeline is written with [fcp-mcp-server](https://github.com/DareDev256/fcp-mcp-server), then the agent stops. The user imports the XML in Final Cut and exports 4K (`references/tools.md`). Panamera's existing `render.py` still imports the old dreliq9 `fcp_mcp` package; new work must not copy that pattern.
 - One recipe: `recipes/talking-head.md`, `recipes/vlog.md`, `recipes/podcast-to-youtube.md`, `recipes/shorts-from-long-form.md`, or `recipes/narrated-screen-tutorial.md`.
 - Assets, searched then copied into the video project: `library/`, `graphics/`, and `memes/README.md` before `memes/catalog.json`.
 
